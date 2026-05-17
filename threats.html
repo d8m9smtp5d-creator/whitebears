@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угрозы — Белые медведи</title>
+    <!-- ПОДКЛЮЧЕНИЕ CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/threats.css">
+    <!-- ПОДКЛЮЧЕНИЕ ШРИФТОВ Futura, Oi, Yanone Kaffeesatz -->
+    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Mono+One&family=Seymour+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ШАПКА САЙТА -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" >
+            <div class="header__logo">
+            
+                <img src="images/logo.png" alt="logo" class="header__logo-image">
+            </div>
+            </a>
+            <nav>
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a href="index.html" class="header__menu-link">Главная</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="about.html" class="header__menu-link">О нас</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="help.html" class="header__menu-link">Помощь</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="threats.html" class="header__menu-link">Угрозы</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="media.html" class="header__menu-link">Медиа</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="threats-page">
+        <div class="threats__container">
+            <!-- ГЛАВНЫЙ ЗАГОЛОВОК СТРАНИЦЫ -->
+            <div class="threats-header">
+                <h1 class="threats-header__title">Угрозы</h1>
+            </div>
+
+            <!-- 1. БЛОК: Потеря морского льда (заголовок в одну строку, изображение справа) -->
+            <div class="threat-block">
+                <div class="threat-block__row threat-block__row--image-right">
+                    <div class="threat-block__text-col">
+                        <h2 class="threat-block__subtitle">Потеря морского льда</h2>
+                        <p class="threat-block__text">
+                            Это не просто изменение пейзажа — это системный коллапс всей арктической экосистемы, в центре которой находится белый медведь.
+                        </p>
+                        <p class="threat-block__text">
+                            Морской лёд для белого медведя — не просто территория или временная платформа. Это фундаментальное условие выживания, сложившееся за тысячи лет эволюции. На льду происходят все ключевые события их жизни: охота, миграция, размножение, воспитание потомства. Однако сегодня этот фундамент стремительно разрушается под воздействием климатических изменений, и последствия этого процесса уже носят необратимый характер для многих популяций.
+                        </p>
+                        <p class="threat-block__text">
+                            Согласно климатическим моделям, при сохранении текущих выбросов парниковых газов, к середине XXI века летний морской лёд в Арктике может полностью исчезать на один или несколько месяцев в году. Для белых медведей это означает потерю жизненного пространства в критически важный сезон, что поставит большую часть популяции на грань выживания в пределах нескольких десятилетий.
+                        </p>
+                    </div>
+                    <div class="threat-block__image-col">
+                        <img src="images/glacier.png" alt="Таяние ледника" class="threat-block__img img-glacier">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. БЛОК: Снижение доступности добычи (заголовок в две строки, изображение слева) -->
+            <div class="threat-block">
+                <div class="threat-block__row threat-block__row--image-left">
+                    <div class="threat-block__image-col">
+                        <img src="images/bear6.png" alt="Медведь на льду" class="threat-block__img img-bear6">
+                    </div>
+                    <div class="threat-block__text-col">
+                        <h2 class="threat-block__subtitle threat-block__subtitle--double">
+                            Снижение доступности<br>добычи
+                        </h2>
+                        <p class="threat-block__text">
+                            Голодная Арктика: когда охота становится невозможной
+                        </p>
+                        <p class="threat-block__text">
+                            Даже если лёд ещё есть — это не значит, что на нём можно прокормиться. Белые медведи охотятся преимущественно на кольчатых нерп и морских зайцев, которые также зависят от льда. Но из-за изменения климата меняется и поведение тюленей: они уходят в менее доступные зоны, ныряют глубже, реже выходят на поверхность.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. БЛОК: Загрязнение Арктики (заголовок в одну строку, изображение справа) -->
+            <div class="threat-block">
+                <div class="threat-block__row threat-block__row--image-right">
+                    <div class="threat-block__text-col">
+                        <h2 class="threat-block__subtitle">Загрязнение Арктики</h2>
+                        <p class="threat-block__text">
+                            Невидимая угроза: токсины, которые не видны, но убивают.
+                        </p>
+                        <p class="threat-block__text">
+                            Арктика кажется чистой и нетронутой, но это иллюзия. Благодаря океаническим течениям и атмосферным потокам сюда попадают загрязнители со всего мира: микропластик, тяжёлые металлы, стойкие органические загрязнители (СОЗ). Как это влияет на медведей? Токсины накапливаются в организме тюленей, а через них — в медведях. Уровень загрязняющих веществ у белых медведей сегодня — один из самых высоких среди всех млекопитающих. Это приводит к нарушениям иммунитета, репродуктивной системы, развития детёнышей. Медвежата, получающие токсины с молоком матери. 
+                        </p>
+                        <p class="threat-block__text">
+                            Загрязнение — это тихий, невидимый, но смертельно опасный враг, который подтачивает здоровье популяции изнутри.
+                        </p>
+                    </div>
+                    <div class="threat-block__image-col">
+                        <img src="images/bear7.png" alt="Медведь на фоне индустрии" class="threat-block__img img-bear7">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. БЛОК: Прямое воздействие человека (заголовок в две строки, изображение слева) -->
+            <div class="threat-block">
+                <div class="threat-block__row threat-block__row--image-left">
+                    <div class="threat-block__image-col">
+                        <img src="images/bear8.png" alt="Конфликт с человеком" class="threat-block__img img-bear8">
+                    </div>
+                    <div class="threat-block__text-col">
+                        <h2 class="threat-block__subtitle threat-block__subtitle--double">
+                            Прямое воздействие<br>человека
+                        </h2>
+                        <p class="threat-block__text">
+                            Когда белый медведь и человек встречаются лицом к лицу — это почти всегда трагедия для животного. Помимо глобальных климатических изменений, белые медведи сталкиваются с прямыми и часто смертельными угрозами со стороны человека. По мере таяния льдов и расширения человеческой деятельности в Арктике, эти конфликты становятся всё более частыми и драматичными.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. БЛОК: Синергетический эффект (заголовок в две строки, изображение справа) -->
+            <div class="threat-block last-block">
+                <div class="threat-block__row threat-block__row--image-right">
+                    <div class="threat-block__text-col">
+                        <h2 class="threat-block__subtitle threat-block__subtitle--double">
+                            Синергетический<br>эффект
+                        </h2>
+                        <p class="threat-block__text">
+                            Смертельная математика: когда угрозы не складываются, а умножаются.
+                        </p>
+                        <p class="threat-block__text">
+                            Самая большая опасность для белых медведей заключается не в том, что на них воздействует несколько угроз одновременно. Ключевая проблема — это синергетический эффект, когда отдельные факторы риска усиливают действие друг друга, приводя к катастрофическим последствиям, значительно превосходящим простую сумму этих угроз.
+                        </p>
+                    </div>
+                    <div class="threat-block__image-col">
+                        <img src="images/bear9.png" alt="Медведь на фоне угроз" class="threat-block__img img-bear9">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ПОДВАЛ (ФУТЕР) -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__logo-column">
+                <img src="images/logo.png" alt="white bear logo" class="footer__logo">
+            </div>
+            <div class="footer__nav-column">
+                <h4 class="footer__column-title">Навигация</h4>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item"><a href="index.html" class="footer__menu-link">Главная</a></li>
+                    <li class="footer__menu-item"><a href="about.html" class="footer__menu-link">О нас</a></li>
+                    <li class="footer__menu-item"><a href="help.html" class="footer__menu-link">Помощь</a></li>
+                    <li class="footer__menu-item"><a href="threats.html" class="footer__menu-link">Угрозы</a></li>
+                    <li class="footer__menu-item"><a href="media.html" class="footer__menu-link">Медиа</a></li>
+                </ul>
+            </div>
+            <div class="footer__social-column">
+                <h4 class="footer__column-title">Контакты</h4>
+                <ul class="footer__social">
+                    <li class="footer__social-item"><a href="https://vk.ru/club238170233" class="footer__social-link">Сообщество во вконтакте</a></li>
+                    <li class="footer__social-item"><a href="https://t.me/mvivgp" class="footer__social-link">Сообщество в телеграме</a></li>
+                </ul>
+            </div>
+            <div class="footer__info-column">
+                <h4 class="footer__info-phone">+7 999 999 99 99</h4>
+                <h4 class="footer__info-email">qwertyuiop@gmail.com</h4>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

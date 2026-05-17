@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>white bear</title>
+    <!-- ПОДКЛЮЧЕНИЕ CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/index.css">
+    <!-- ПОДКЛЮЧЕНИЕ ШРИФТОВ Futura и Oi -->
+    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Mono+One&family=Seymour+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ШАПКА САЙТА -->
+    <header class="header">
+        <div class="header__container">
+            <!-- ЛОГОТИП (слева) -->
+             <a href="index.html" >
+            <div class="header__logo">
+            
+                <img src="images/logo.png" alt="logo" class="header__logo-image">
+            </div>
+            </a>
+
+            <!-- МЕНЮ НАВИГАЦИИ (справа) -->
+            <nav>
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a href="index.html" class="header__menu-link">Главная</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="about.html" class="header__menu-link">О нас</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="help.html" class="header__menu-link">Помощь</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="threats.html" class="header__menu-link">Угрозы</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="media.html" class="header__menu-link">Медиа</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+     <!-- СЕКЦИЯ С ЗАГОЛОВКОМ И ТЕКСТОМ -->
+    <section class="hero">
+        <div class="hero__container">
+            <!-- Заголовок "Белые медведи" -->
+            <h1 class="hero__title">Белые медведи</h1>
+            
+            <!-- Текстовый блок с описанием сайта -->
+            <div class="hero__description">
+                <p class="hero__description-text">
+                    Этот сайт посвящён самым величественным обитателям Арктики — белым медведям. 
+                    Здесь вы узнаете об их образе жизни, угрозах, с которыми они сталкиваются, 
+                    и о том, как каждый из нас может помочь сохранить этот уникальный вид для будущих поколений.
+                </p>
+            </div>
+            
+            <!-- Изображение -->
+            <div class="hero__image-wrapper">
+                <img src="images/index.png" alt="Белые медведи" class="hero__image">
+            </div>
+        </div>
+    </section>
+
+    <!-- НОВАЯ СЕКЦИЯ С ЗАГОЛОВКАМИ И ИЗОБРАЖЕНИЕМ -->
+<section class="themes">
+        <div class="themes__container">
+            <h2 class="themes__title">Их дом тает</h2>
+            <h3 class="themes__subtitle">Их время на исходе</h3>
+            <section class="themes">
+                     <!-- НОВЫЙ БЛОК С ТЕКСТОМ И ИЗОБРАЖЕНИЯМИ -->
+<section class="content-block">
+   
+        <!-- Верхний ряд: текст слева, картинка справа -->
+        <div class="content-block__row">
+            <div class="content-block__text-column">
+                <p class="content-block__text">
+                    Арктика — не просто ледяная пустыня. Это дом, детская, охотничьи угодья, целый мир белого медведя.<br>
+                    Мир, который исчезает на наших глазах. С каждым годом льдов становится меньше.<br>
+                    Мы ещё можем изменить это. Но только если начнём действовать сейчас — пока у них есть время. Пока у нас есть шанс.
+                </p>
+                <p class="content-block__text">
+                    Арктика стремительно меняется: льды, которые веками служили домом и охотничьими угодьями для белых медведей, исчезают с пугающей скоростью. Без льда медведи не могут добывать пищу, теряют силы и погибают. Учёные предупреждают: если ситуация не изменится, к 2100 году мы потеряем до двух третей популяции.
+                </p>
+            </div>
+            <div class="content-block__image-column">
+                <img src="images/bear1.png" alt="Белый медведь на льдине" class="content-block__image">
+            </div>
+        </div>
+        <!-- Нижний ряд: две картинки -->
+        <div class="content-block__images-row">
+            <div class="content-block__image-wrapper content-block__image-wrapper--large">
+                <img src="images/bear2.png" alt="Медведица с медвежонком" class="content-block__small-image">
+            </div>
+            <div class="content-block__image-wrapper content-block__image-wrapper--small">
+                <img src="images/bear3.png" alt="Медведь вплавь" class="content-block__small-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- НОВАЯ СЕКЦИЯ: Тревожные цифры -->
+<section class="stats">
+    <div class="stats__container">
+        <h2 class="stats__title">Тревожные цифры</h2>
+        
+        <!-- БЛОК С ТЕКСТОМ СЛЕВА И КАРТИНКОЙ СПРАВА -->
+        <div class="stats__content">
+            <div class="stats__text-column">
+                <h3 class="stats__subtitle">Популяция</h3>
+                <p class="stats__text">
+                    За каждым процентом сокращения численности — реальные жизни, семьи, целые популяции на грани исчезновения.
+                </p>
+                <p class="stats__text">
+                    В некоторых регионах популяция сократилась на 40% всего за одно десятилетие. Если текущие тенденции сохранятся, к 2100 году мы можем потерять до двух третей всех белых медведей на планете. Эти данные — не прогноз, а диагноз. Вид, который пережил ледниковые периоды, может не пережить столетие человеческого влияния. 
+                </p>
+            </div>
+            <div class="stats__image-column">
+                <img src="images/bear4.png" alt="График популяции белых медведей" class="stats__image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- НОВАЯ СЕКЦИЯ: Площадь льдов -->
+<section class="ice-area">
+    <div class="ice-area__container">
+        <!-- БЛОК С КАРТИНКОЙ СЛЕВА И ТЕКСТОМ СПРАВА -->
+        <div class="ice-area__content">
+            <div class="ice-area__image-column">
+                <img src="images/bear5.png" alt="График сокращения площади льдов в Арктике" class="ice-area__image">
+            </div>
+            <div class="ice-area__text-column">
+                <h2 class="ice-area__title">Площадь льдов</h2>
+                <p class="ice-area__text">
+                    Арктический лёд – не просто пейзаж, это фундамент жизни белого медведя. Каждое десятилетие мы теряем часть этого фундамента безвозвратно. За последние 40 лет минимальная площадь летнего льда сократилась более чем на 40%. Каждое лето Арктика теряет в среднем 13,1% ледового покрова за десятилетие. К 2030-м годам учёные прогнозируют первое лето в Арктике практически безо льда.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>
+    <!-- ПОДВАЛ САЙТА (ФУТЕР) -->
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- ЛОГОТИП СЛЕВА -->
+            <div class="footer__logo-column">
+                <img src="images/logo.png" alt="white bear logo" class="footer__logo">
+            </div>
+            
+            <!-- КОЛОНКА НАВИГАЦИИ -->
+            <div class="footer__nav-column">
+                <h4 class="footer__column-title">Навигация</h4>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item"><a href="index.html" class="footer__menu-link">Главная</a></li>
+                    <li class="footer__menu-item"><a href="about.html" class="footer__menu-link">О нас</a></li>
+                    <li class="footer__menu-item"><a href="help.html" class="footer__menu-link">Помощь</a></li>
+                    <li class="footer__menu-item"><a href="threats.html" class="footer__menu-link">Угрозы</a></li>
+                    <li class="footer__menu-item"><a href="media.html" class="footer__menu-link">Медиа</a></li>
+                </ul>
+            </div>
+            
+            <!-- КОЛОНКА КОНТАКТОВ (СОЦСЕТИ) -->
+            <div class="footer__social-column">
+                <h4 class="footer__column-title">Контакты</h4>
+                <ul class="footer__social">
+                    <li class="footer__social-item"><a href="https://vk.ru/club238170233" class="footer__social-link">Сообщество во вконтакте</a></li>
+                    <li class="footer__social-item"><a href="https://t.me/mvivgp" class="footer__social-link">Сообщество в телеграме</a></li>
+                </ul>
+            </div>
+            
+            <!-- КОЛОНКА С ТЕЛЕФОНОМ И ПОЧТОЙ -->
+            <div class="footer__info-column">
+                <h4 class="footer__info-phone">+7 999 999 99 99</h4>
+                <h4 class="footer__info-email">qwertyuiop@gmail.com</h4>
+            </div>
+        </div>
+    </footer>
+
+
+</main>
+
+</body>
+</html>

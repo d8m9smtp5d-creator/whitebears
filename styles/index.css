@@ -1,0 +1,661 @@
+/* === ОБЩИЕ КОНТЕЙНЕРЫ ДЛЯ ГЛАВНОЙ === */
+.hero__container,
+.themes__container,
+.content-block__container,
+.stats__container,
+.ice-area__container {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+.hero,
+.themes,
+.content-block,
+.stats,
+.ice-area {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero__container,
+.themes__container,
+.content-block__container,
+.stats__container,
+.ice-area__container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* === ЗАГОЛОВКИ === */
+.hero__title,
+.hero__subtitle,
+.themes__title,
+.themes__subtitle,
+.stats__title,
+.stats__subtitle,
+.ice-area__title {
+   font-family: "Rubik Mono One", monospace;
+    font-style: normal;
+   color: #212B44;
+    font-size: 42px;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    width: 100%;
+}
+
+.hero__title {
+    margin-bottom: 16px;
+    margin-top: 60px;
+}
+
+.hero__subtitle {
+    margin-bottom: 25px;
+}
+
+.themes__title {
+    margin-bottom: 5px;
+}
+
+.themes__subtitle {
+    margin-bottom: 0;
+}
+
+/* === ИЗОБРАЖЕНИЕ === */
+.hero__image-wrapper {
+    width: 100%;
+    align-self: flex-start;
+}
+
+.hero__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1360 / 517;
+    border-radius: 40px;
+    object-fit: cover;
+    display: block;
+}
+
+/* === БЛОК С ТЕКСТОМ И ИЗОБРАЖЕНИЯМИ === */
+.content-block {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.content-block__container {
+    padding: 36px 20px 0;
+}
+
+.content-block__row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.content-block__text-column {
+    flex: 0 0 calc(100% * 774 / (774 + 555 + 30));
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-block__text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #212B44;
+    font-weight: 400;
+    margin: 0;
+}
+
+.content-block__image-column {
+    flex: 0 0 calc(100% * 555 / (774 + 555 + 30));
+    min-width: 0;
+}
+
+.content-block__image {
+    width: 100%;
+    aspect-ratio: 555 / 408;
+    border-radius: 30px;
+    object-fit: cover;
+    display: block;
+}
+
+.content-block__images-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    width: 100%;
+}
+
+.content-block__image-wrapper--large {
+    flex: 0 0 calc(100% * 774 / (774 + 555 + 30));
+    min-width: 0;
+}
+
+.content-block__image-wrapper--small {
+    flex: 0 0 calc(100% * 555 / (774 + 555 + 30));
+    min-width: 0;
+}
+
+.content-block__small-image {
+    width: 100%;
+    aspect-ratio: 774 / 393;
+    border-radius: 30px;
+    object-fit: cover;
+    display: block;
+}
+
+.content-block__image-wrapper--small .content-block__small-image {
+    aspect-ratio: 555 / 393;
+}
+
+/* === СЕКЦИЯ СТАТИСТИКИ === */
+.stats__container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.stats__title {
+    margin-bottom: 28px;
+}
+
+.stats__subtitle {
+    margin-bottom: 0;
+}
+
+.stats__content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    width: 100%;
+    margin-top: 28px;
+}
+
+.stats__text-column {
+    flex: 0 0 calc(100% * 774 / (774 + 555 + 40));
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stats__text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #212B44;
+    font-weight: 400;
+    margin: 0;
+}
+
+.stats__image-column {
+    flex: 0 0 calc(100% * 555 / (774 + 555 + 40));
+    min-width: 0;
+}
+
+.stats__image {
+    width: 100%;
+    aspect-ratio: 555 / 408;
+    border-radius: 30px;
+    object-fit: cover;
+    display: block;
+}
+
+/* === СЕКЦИЯ ПЛОЩАДЬ ЛЬДОВ === */
+.ice-area__container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ice-area__title {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.ice-area__content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.ice-area__image-column {
+    flex: 0 0 calc(100% * 555 / (774 + 555 + 40));
+    min-width: 0;
+}
+
+.ice-area__image {
+    width: 100%;
+    aspect-ratio: 555 / 408;
+    border-radius: 30px;
+    object-fit: cover;
+    display: block;
+    margin-top: 100px;
+}
+
+.ice-area__text-column {
+    flex: 0 0 calc(100% * 774 / (774 + 555 + 40));
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ice-area__text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #212B44;
+    font-weight: 400;
+    margin: 0;
+}
+
+.hero__description-text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #212B44;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* === ДЕСКТОП (от 1201px) === */
+@media screen and (min-width: 1201px) {
+    .hero__container,
+    .themes__container,
+    .content-block__container,
+    .stats__container,
+    .ice-area__container {
+        max-width: 1920px;
+        padding: 0 280px;
+    }
+
+    .hero__container {
+        padding: 0 280px;
+    }
+
+    .themes__container {
+        padding: 0 280px;
+    }
+
+    .content-block__container {
+        padding: 100px 280px 0;
+    }
+
+    .hero__image {
+        margin-bottom: 80px;
+        border-radius: 60px;
+        margin-top: 20px;
+    }
+
+    .hero__subtitle {
+        margin-bottom: 37px;
+    }
+
+    .themes__title {
+        margin-bottom: 5px;
+    }
+    
+    .themes__subtitle {
+        font-size: 42px;
+        margin-bottom: 16px;
+    }
+    
+    .content-block__text {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+    
+    .content-block__text-column {
+        gap: 16px;
+    }
+    
+    .content-block__row {
+        gap: 40px;
+        margin-bottom: 15px;
+    }
+    
+    .content-block__images-row {
+        margin-bottom: 100px;
+        gap: 40px;
+    }
+    
+    .stats__container {
+        padding: 0 280px;
+    }
+    
+    .stats__title {
+        margin-bottom: 42px;
+        font-size: 42px;
+    }
+    
+    .stats__subtitle {
+        font-size: 42px;
+    }
+    
+    .stats__content {
+        gap: 40px;
+        margin-top: 28px;
+    }
+    
+    .ice-area__container {
+        padding: 0 280px;
+    }
+    
+    .ice-area__title {
+        font-size: 42px;
+        margin-bottom: 0px;
+        margin-top: 100px;
+    }
+    
+    .ice-area__content {
+        gap: 40px;
+    }
+    
+    .ice-area__text {
+        font-size: 20px;
+    }
+    
+    .hero__description {
+        margin-bottom: 60px;
+        max-width: 900px;
+    }
+    
+    .hero__description-text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
+
+/* === ПЛАНШЕТЫ (от 769px до 1200px) === */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .hero__container,
+    .themes__container,
+    .content-block__container,
+    .stats__container,
+    .ice-area__container {
+        max-width: 1200px;
+        padding: 0 60px;
+    }
+
+    .hero__container {
+        padding: 0 60px;
+    }
+
+    .themes__container {
+        padding: 0 60px;
+    }
+
+    .content-block__container {
+        padding: 80px 60px 0;
+    }
+
+    .hero__title,
+    .hero__subtitle,
+    .themes__title,
+    .themes__subtitle {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero__image {
+        margin-bottom: 80px;
+        border-radius: 60px;
+    }
+    
+    .content-block__text {
+        font-size: 20px;
+        line-height: 1.45;
+    }
+    
+    .content-block__row {
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .content-block__images-row {
+        margin-bottom: 100px;
+        gap: 40px;
+    }
+    
+    .stats__container {
+        padding: 0 60px;
+    }
+    
+    .stats__title,
+    .stats__subtitle {
+        font-size: 48px;
+    }
+    
+    .stats__title {
+        margin-bottom: 20px;
+    }
+    
+    .stats__content {
+        gap: 40px;
+        margin-top: 28px;
+    }
+    
+    .stats__text {
+        font-size: 18px;
+        line-height: 1.45;
+    }
+    
+    .ice-area__container {
+        padding: 0 60px;
+    }
+    
+    .ice-area__title {
+        font-size: 48px;
+        margin-bottom: 0px;
+        margin-top: 80px;
+    }
+    
+    .ice-area__content {
+        gap: 40px;
+    }
+    
+    .ice-area__text {
+        font-size: 18px;
+        line-height: 1.45;
+    }
+    
+    .hero__description {
+        margin-bottom: 50px;
+        max-width: 85%;
+    }
+    
+    .hero__description-text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
+
+/* === МОБИЛЬНЫЕ (до 768px) === */
+@media screen and (max-width: 768px) {
+    .hero__container,
+    .themes__container,
+    .content-block__container,
+    .stats__container,
+    .ice-area__container {
+        padding: 0 20px;  /* как в about.css */
+    }
+    
+    .hero__container {
+        padding: 0 20px;
+    }
+    
+    /* Заголовки на мобильных — 42px, как в about.css */
+    .hero__title,
+    .hero__subtitle,
+    .themes__title,
+    .themes__subtitle,
+    .stats__title,
+    .stats__subtitle,
+    .ice-area__title {
+        font-size: 42px;
+    }
+    
+    .hero__title {
+        margin-top: 30px;    /* как в about.css */
+        margin-bottom: 16px;
+    }
+    
+    .hero__image {
+        margin-bottom: 40px;
+        border-radius: 30px;  /* единый радиус с about */
+        margin-top: 10px;
+    }
+    
+    .themes__title {
+        margin-bottom: 5px;
+    }
+    
+    .themes__subtitle {
+        margin-bottom: 28px;  /* как отступ у about__title */
+    }
+    
+    .content-block__container {
+        padding: 36px 20px 0;
+    }
+    
+    /* Все тексты — 18px, как в about.css */
+    .content-block__text,
+    .stats__text,
+    .ice-area__text,
+    .hero__description-text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    
+    .content-block__row,
+    .content-block__images-row {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        gap: 20px;
+    }
+    
+    .content-block__text-column,
+    .content-block__image-column,
+    .content-block__image-wrapper--large,
+    .content-block__image-wrapper--small {
+        flex: 1 1 100%;
+    }
+    
+    .stats__title {
+        margin-bottom: 28px;
+    }
+    
+    .stats__content {
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 20px;
+    }
+    
+    .stats__text-column,
+    .stats__image-column {
+        flex: 1 1 100%;
+    }
+    
+    .ice-area__title {
+        margin-bottom: 0px;
+        margin-top: 60px;    /* как у team в about.css */
+    }
+    
+    .ice-area__content {
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 0;
+    }
+    
+    .ice-area__image-column,
+    .ice-area__text-column {
+        flex: 1 1 100%;
+    }
+    
+    .ice-area__image {
+        margin-top: 0;
+    }
+    
+    .hero__description {
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+}
+
+/* === ОЧЕНЬ БОЛЬШИЕ ЭКРАНЫ (от 1921px) === */
+@media screen and (min-width: 1921px) {
+    .hero__container,
+    .themes__container,
+    .content-block__container,
+    .stats__container,
+    .ice-area__container {
+        padding: 0 280px;
+        max-width: none;
+    }
+    
+    .hero__container {
+        padding: 0 280px;
+    }
+    
+    .themes__container {
+        padding: 0 280px;
+    }
+
+    .themes__subtitle {
+        font-size: 48px;
+        margin-bottom: 28px;
+    }
+
+    .hero__image {
+        margin-bottom: 80px;
+        border-radius: 60px;
+    }
+    
+    .content-block__container {
+        padding: 100px 280px 0;
+    }
+    
+    .stats__container {
+        padding: 0 280px;
+        max-width: none;
+    }
+    
+    .stats__title {
+        margin-bottom: 28px;
+    }
+    
+    .ice-area__container {
+        padding: 0 280px;
+        max-width: none;
+    }
+    
+    .ice-area__title {
+        margin-bottom: 0px;
+        margin-top: 100px;
+    }
+    
+    .hero__description {
+        margin-bottom: 70px;
+        max-width: 1000px;
+    }
+    
+    .hero__description-text {
+        font-size: 18px;
+    }
+}/* Убираем отступы у указанных заголовков */
+.themes__title,
+.themes__subtitle,
+.stats__title,
+.stats__subtitle {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}

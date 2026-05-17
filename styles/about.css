@@ -1,0 +1,395 @@
+/* === ОБЩИЕ КОНТЕЙНЕРЫ ДЛЯ СТРАНИЦЫ О НАС === */
+.about,
+.team,
+.goals {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about__container,
+.team__container,
+.goals__container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* === СЕКЦИЯ О НАС === */
+.about__title {
+     font-family: "Rubik Mono One", monospace;
+    font-style: normal;
+    color: #212B44;
+    font-size: 42px;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.about__content {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.about__text-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about__text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #212B44;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* === СЕКЦИЯ КОМАНДА === */
+.team__content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    width: 100%;
+}
+
+.team__image-column {
+    flex: 0 0 calc(100% * 555 / (774 + 555 + 40));
+    min-width: 0;
+}
+
+.team__image {
+    width: 100%;
+    aspect-ratio: 555 / 408;
+    border-radius: 30px;
+    object-fit: cover;
+    display: block;
+}
+
+.team__text-column {
+    flex: 0 0 calc(100% * 774 / (774 + 555 + 40));
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.team__title {
+    font-family: "Rubik Mono One", monospace;
+    font-style: normal;
+    color: #212B44;
+    font-size: 42px;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.team__description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.team__text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #212B44;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* === СЕКЦИЯ ЦЕЛИ === */
+.goals__content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    width: 100%;
+}
+
+.goals__text-column {
+    flex: 0 0 calc(100% * 774 / (774 + 555 + 40));
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.goals__title {
+    font-family: "Rubik Mono One", monospace;
+    color: #212B44;
+    font-size: 42px;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.goals__description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.goals__text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #212B44;
+    font-weight: 400;
+    margin: 0;
+}
+
+.goals__image-column {
+    flex: 0 0 calc(100% * 555 / (774 + 555 + 40));
+    min-width: 0;
+}
+
+.goals__image {
+    width: 100%;
+    aspect-ratio: 555 / 408;
+    border-radius: 30px;
+    object-fit: cover;
+    display: block;
+}
+
+/* === ДЕСКТОП (от 1201px) === */
+@media screen and (min-width: 1201px) {
+    .about__container,
+    .team__container,
+    .goals__container {
+        max-width: 1920px;
+        padding: 0 280px;
+    }
+    
+    .about__title {
+        font-size: 42px;
+        margin-bottom: 16px;
+        margin-top: 60px;
+    }
+    
+    .about__text {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    
+    .team__container {
+        padding: 0 280px;
+    }
+    
+    .team__content {
+        gap: 40px;
+        margin-top: 100px;
+        margin-bottom: 0;
+    }
+    
+    .team__title {
+        font-size: 42px;
+        margin-bottom: 16px;
+    }
+    
+    .team__text {
+        font-size: 20px;
+    }
+    
+    .goals__container {
+        padding: 0 280px;
+    }
+    
+    .goals__content {
+        gap: 40px;
+        margin-top: 100px;
+        margin-bottom: 0;
+    }
+    
+    .goals__title {
+        font-size: 42px;
+        margin-bottom: 16px;
+    }
+    
+    .goals__text {
+        font-size: 20px;
+    }
+}
+
+/* === ПЛАНШЕТЫ (от 769px до 1200px) === */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .about__container,
+    .team__container,
+    .goals__container {
+        max-width: 1200px;
+        padding: 0 60px;
+    }
+    
+    .about__title {
+        font-size: 48px;
+        margin-bottom: 10px;
+        margin-top: 40px;
+    }
+    
+    .about__text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    
+    .team__container {
+        padding: 0 60px;
+    }
+    
+    .team__content {
+        gap: 40px;
+        margin-top: 80px;
+    }
+    
+    .team__title {
+        font-size: 48px;
+        margin-bottom: 28px;
+    }
+    
+    .team__text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    
+    .goals__container {
+        padding: 0 60px;
+    }
+    
+    .goals__content {
+        gap: 40px;
+        margin-top: 80px;
+    }
+    
+    .goals__title {
+        font-size: 48px;
+        margin-bottom: 28px;
+    }
+    
+    .goals__text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
+
+/* === МОБИЛЬНЫЕ (до 768px) === */
+@media screen and (max-width: 768px) {
+    .about__container,
+    .team__container,
+    .goals__container {
+        padding: 0 20px;
+    }
+    
+    .about__title {
+        font-size: 42px;
+        margin-bottom: 28px;
+        margin-top: 30px;
+    }
+    
+    .about__text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    
+    .team__container {
+        padding: 0 20px;
+    }
+    
+    .team__content {
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 60px;
+    }
+    
+    .team__image-column,
+    .team__text-column {
+        flex: 1 1 100%;
+    }
+    
+    .team__title {
+        font-size: 42px;
+        margin-bottom: 28px;
+    }
+    
+    .team__text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    
+    .goals__container {
+        padding: 0 20px;
+    }
+    
+    .goals__content {
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 60px;
+    }
+    
+    .goals__text-column,
+    .goals__image-column {
+        flex: 1 1 100%;
+    }
+    
+    .goals__title {
+        font-size: 42px;
+        margin-bottom: 28px;
+    }
+    
+    .goals__text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
+
+/* === ОЧЕНЬ БОЛЬШИЕ ЭКРАНЫ (от 1921px) === */
+@media screen and (min-width: 1921px) {
+    .about__container,
+    .team__container,
+    .goals__container {
+        padding: 0 280px;
+        max-width: none;
+    }
+    
+    .about__title {
+        margin-bottom: 28px;
+        margin-top: 60px;
+    }
+    
+    .team__container {
+        padding: 0 280px;
+        max-width: none;
+    }
+    
+    .team__content {
+        margin-top: 100px;
+    }
+    
+    .team__title {
+        margin-bottom: 28px;
+    }
+    
+    .goals__container {
+        padding: 0 280px;
+        max-width: none;
+    }
+    
+    .goals__content {
+        margin-top: 100px;
+    }
+    
+    .goals__title {
+        margin-bottom: 28px;
+    }
+}

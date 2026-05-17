@@ -1,0 +1,229 @@
+/* threats.css - стили для страницы Угрозы */
+
+/* Общие контейнеры для страницы угроз */
+.threats-page {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+
+.threats__section {
+    width: 100%;
+}
+
+.threats__container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Заголовок страницы */
+.threats-header {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.threats-header__title {
+     font-family: "Rubik Mono One", monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1.2;
+    color: #212B44;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+}
+
+/* Блоки с угрозами */
+.threat-block {
+    margin-bottom: 100px;
+}
+
+.threat-block__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Направления расположения элементов */
+.threat-block__row--image-left {
+    flex-direction: row;
+}
+
+.threat-block__row--image-right {
+    flex-direction: row-reverse;
+}
+
+/* Левая колонка (текст) */
+.threat-block__text-col {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Правая колонка (изображение) */
+.threat-block__image-col {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Заголовки внутри блока (подзаголовки угроз) */
+.threat-block__subtitle {
+     font-family: "Rubik Mono One", monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1.2;
+    color: #212B44;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 0.02em;
+}
+
+/* Специальный класс для заголовка с двумя строками */
+.threat-block__subtitle--double {
+    margin-bottom: 30px;
+}
+
+/* Текст абзацев */
+.threat-block__text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #212B44;
+    margin-bottom: 20px;
+}
+
+.threat-block__text:last-child {
+    margin-bottom: 0;
+}
+
+/* Изображения */
+.threat-block__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+/* Пропорции изображений согласно макету */
+.img-glacier {
+    aspect-ratio: 555 / 727;
+}
+
+.img-bear6 {
+    aspect-ratio: 670 / 411;
+}
+
+.img-bear7 {
+    aspect-ratio: 670 / 535;
+}
+
+.img-bear8 {
+    aspect-ratio: 779 / 535;
+}
+
+.img-bear9 {
+    aspect-ratio: 788 / 535;
+}
+
+/* Последний блок с дополнительным отступом */
+.last-block {
+    margin-bottom: 100px;
+}
+
+/* ========== АДАПТИВНЫЕ СТИЛИ ========== */
+
+/* Десктоп (от 1201px) */
+@media screen and (min-width: 1201px) {
+    .threats__container {
+        max-width: 1920px;
+        padding: 0 280px;
+    }
+    
+    .threats-header__title {
+        font-size: 42px;
+    }
+    
+    .threat-block__subtitle {
+        font-size: 42px;
+    }
+}
+
+/* Планшеты (от 769px до 1200px) */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .threats__container {
+        max-width: 1200px;
+        padding: 0 60px;
+    }
+    
+    .threats-header__title {
+        font-size: 48px;
+    }
+    
+    .threat-block__subtitle {
+        font-size: 48px;
+    }
+    
+    .threat-block__text {
+        font-size: 22px;
+    }
+}
+
+/* Мобильные (до 768px) */
+@media screen and (max-width: 768px) {
+    .threats__container {
+        padding: 0 20px;
+    }
+    
+    .threats-header__title {
+        font-size: 42px;
+    }
+    
+    .threat-block__subtitle {
+        font-size: 42px;
+    }
+    
+    .threat-block__text {
+        font-size: 20px;
+    }
+    
+    .threat-block {
+        margin-bottom: 70px;
+    }
+    
+    .threat-block__row {
+        gap: 30px;
+        flex-direction: column;
+    }
+    
+    .last-block {
+        margin-bottom: 70px;
+    }
+}
+
+/* Мобильные (до 480px) */
+@media screen and (max-width: 480px) {
+    .threats-header__title {
+        font-size: 36px;
+    }
+    
+    .threat-block__subtitle {
+        font-size: 36px;
+    }
+    
+    .threat-block__text {
+        font-size: 18px;
+    }
+    
+    .threat-block {
+        margin-bottom: 50px;
+    }
+    
+    .threat-block__row {
+        gap: 25px;
+    }
+}

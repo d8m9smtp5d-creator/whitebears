@@ -1,0 +1,497 @@
+/* help.css — адаптирован под общую стилистику сайта */
+
+.help-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.help-txt {
+    font-family: "Rubik Mono One", monospace;
+    font-style: normal;
+    color: #212B44;
+    font-size: 42px;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.card {
+    position: relative;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    height: auto;
+}
+
+.card-text {
+    font-family: "Rubik Mono One", monospace;
+    font-style: normal;
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: left;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    width: 100%;
+    color: #212B44;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content.form-popup {
+    width: 480px;
+    max-width: 90vw;
+    background: white;
+    border-radius: 28px;
+    padding: 30px 28px;
+    box-sizing: border-box;
+}
+
+.popup-content.tips-popup {
+    width: 700px;
+    max-width: 92vw;
+    background: white;
+    border-radius: 28px;
+    padding: 30px 32px;
+    box-sizing: border-box;
+}
+
+/* Контейнер для всех полей формы */
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Общие стили для всех полей ввода */
+.inputs-container input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 40px;
+    border: 2px solid #A6C3E1;
+    box-sizing: border-box;
+    font-family: 'Futura PT', 'Futura', 'Trebuchet MS', Arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+.inputs-container input:focus {
+    outline: none;
+    border-color: #355180;
+}
+
+/* Стили для поля Пол с выпадающим списком (сбоку) */
+.gender-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.gender-select-wrapper input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 40px;
+    border: 2px solid #A6C3E1;
+    box-sizing: border-box;
+    font-family: 'Futura PT', 'Futura', 'Trebuchet MS', Arial, sans-serif;
+    font-size: 15px;
+    background-color: white;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.gender-select-wrapper input:focus {
+    outline: none;
+    border-color: #355180;
+}
+
+/* Стрелка-индикатор, показывающая что есть выбор */
+.gender-select-wrapper input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23A6C3E1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+/* Выпадающий список, появляющийся СБОКУ */
+.gender-dropdown {
+    display: none;
+    background: white;
+    border: 2px solid #A6C3E1;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 1001;
+    min-width: 130px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.gender-dropdown.show {
+    display: block;
+}
+
+.gender-option {
+    padding: 12px 20px;
+    font-family: 'Futura PT', 'Futura', 'Trebuchet MS', Arial, sans-serif;
+    font-size: 15px;
+    color: #212B44;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.gender-option:hover {
+    background-color: #A6C3E1;
+}
+
+/* Стили для поля Возраст */
+.age-input {
+    position: relative;
+    width: 100%;
+}
+
+.age-input input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 40px;
+    border: 2px solid #A6C3E1;
+    box-sizing: border-box;
+    font-family: 'Futura PT', 'Futura', 'Trebuchet MS', Arial, sans-serif;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin: 0;
+}
+
+.age-input input.error-age {
+    border-color: #e74c3c;
+    background-color: #fff5f5;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.age-error-msg {
+    color: #e74c3c;
+    font-size: 12px;
+    font-family: 'Futura PT', sans-serif;
+    margin-top: 6px;
+    margin-left: 12px;
+    display: none;
+}
+
+.age-error-msg.show {
+    display: block;
+}
+
+.popup-content h2 {
+    font-family: "Rubik Mono One", monospace;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+    color: #212B44;
+    font-size: 26px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.buttons button {
+    font-family: 'Futura PT', 'Futura', 'Trebuchet MS', Arial, sans-serif;
+    width: 140px;
+    height: 44px;
+    border: none;
+    font-size: 15px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.subscribe {
+    background: #A6C3E1;
+    color: #1e2a3a;
+}
+
+.buttons button:hover {
+    background: #355180;
+    color: #fff;
+}
+
+.back {
+    background: #e0e7f0;
+    color: #1e2a3a;
+}
+
+.back:hover {
+    background: #b0c4de;
+    color: #1e2a3a;
+}
+
+/* Стили для эко-советов и фондов */
+.tips-scroll-area {
+    max-height: 55vh;
+    overflow-y: auto;
+    padding-right: 12px;
+    margin-right: 4px;
+    scrollbar-width: thin;
+}
+
+.tips-scroll-area::-webkit-scrollbar {
+    width: 6px;
+    background: #e2e8f2;
+    border-radius: 10px;
+}
+
+.tips-scroll-area::-webkit-scrollbar-thumb {
+    background: #A6C3E1;
+    border-radius: 10px;
+}
+
+.tip-block {
+    margin-bottom: 30px;
+}
+
+.tip-title {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 20px;
+    color: #212B44;
+    margin-bottom: 12px;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+}
+
+.tip-text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #212B44;
+    font-weight: 400;
+    text-align: left;
+}
+
+.funds-scroll-area {
+    max-height: 55vh;
+    overflow-y: auto;
+    padding-right: 12px;
+    margin-right: 4px;
+    scrollbar-width: thin;
+}
+
+.funds-scroll-area::-webkit-scrollbar {
+    width: 6px;
+    background: #e2e8f2;
+    border-radius: 10px;
+}
+
+.funds-scroll-area::-webkit-scrollbar-thumb {
+    background: #A6C3E1;
+    border-radius: 10px;
+}
+
+.fund-block {
+    margin-bottom: 32px;
+}
+
+.fund-title {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 20px;
+    color: #212B44;
+    margin-bottom: 12px;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+}
+
+.fund-title a {
+    color: #212B44;
+    text-decoration: none;
+    border-bottom: 2px solid #A6C3E1;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.fund-title a:hover {
+    border-bottom-color: #355180;
+    color: #355180;
+}
+
+.fund-description {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #212B44;
+    font-weight: 400;
+    text-align: left;
+}
+
+.popup-close-btn {
+    font-family: 'Futura PT', 'Futura', 'Trebuchet MS', Arial, sans-serif;
+    background: #e0e7f0;
+    color: #1e2a3a;
+    border: none;
+    border-radius: 40px;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.3s;
+    width: fit-content;
+    align-self: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popup-close-btn:hover {
+    background: #b0c4de;
+    color: #1e2a3a;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 750px) {
+    .popup-content.tips-popup {
+        width: 94vw;
+        padding: 24px 20px;
+    }
+    .popup-content.form-popup {
+        width: 90vw;
+        padding: 24px 20px;
+    }
+    
+    /* На мобильных дропдаун показываем под полем */
+    .gender-dropdown {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 550px) {
+    .popup-content.tips-popup {
+        width: 95vw;
+        padding: 20px 16px;
+    }
+    .popup-content.form-popup {
+        width: 92vw;
+        padding: 20px 16px;
+    }
+    .gender-dropdown .gender-option {
+        padding: 10px 16px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .help-container {
+        padding: 0 60px;
+    }
+    .help-txt {
+        font-size: 48px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .card-text {
+        top: 40px;
+        left: 50px;
+        font-size: 36px;
+    }
+    .tip-text, .fund-description {
+        font-size: 18px;
+    }
+    .tip-title, .fund-title {
+        font-size: 18px;
+    }
+    .tips-scroll-area, .funds-scroll-area {
+        max-height: 50vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .help-container {
+        padding: 0 20px;
+    }
+    .help-txt {
+        font-size: 42px;
+        margin-top: 30px;
+        margin-bottom: 28px;
+    }
+    .card {
+        margin: 15px 0;
+    }
+    .card-text {
+        top: 20px;
+        left: 20px;
+        font-size: 28px;
+    }
+    .tip-text, .fund-description {
+        font-size: 18px;
+    }
+    .tip-title, .fund-title {
+        font-size: 16px;
+    }
+    .tips-scroll-area, .funds-scroll-area {
+        max-height: 50vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .help-txt {
+        font-size: 36px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .card-text {
+        top: 12px;
+        left: 12px;
+        font-size: 20px;
+    }
+    .popup-content h2 {
+        font-size: 22px;
+    }
+    .popup-content input {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .tip-text, .fund-description {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .help-container {
+        padding: 0 280px;
+    }
+    .help-txt {
+        font-size: 42px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}

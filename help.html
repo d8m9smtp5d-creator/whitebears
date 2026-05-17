@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Помощь — Сохраним белых медведей</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/help.css">
+    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Mono+One&family=Seymour+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container">
+             <a href="index.html" >
+            <div class="header__logo">
+            
+                <img src="images/logo.png" alt="logo" class="header__logo-image">
+            </div>
+            </a>
+            <nav>
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="index.html" class="header__menu-link">Главная</a></li>
+                    <li class="header__menu-item"><a href="about.html" class="header__menu-link">О нас</a></li>
+                    <li class="header__menu-item"><a href="help.html" class="header__menu-link">Помощь</a></li>
+                    <li class="header__menu-item"><a href="threats.html" class="header__menu-link">Угрозы</a></li>
+                    <li class="header__menu-item"><a href="media.html" class="header__menu-link">Медиа</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="help-container">
+        <h1 class="help-txt">Помощь</h1>
+
+        <div class="cards-wrapper">
+            <div class="card" onclick="handleCardClick('Фонды', 'funds')">
+                <img src="images/fonds.png" alt="фонды">
+                <div class="card-text">Фонды</div>
+            </div>
+            <div class="card" onclick="handleCardClick('Волонтерство', 'volunteer')">
+                <img src="images/volunteering.png" alt="волонтерство">
+                <div class="card-text">Волонтерство</div>
+            </div>
+            <div class="card" onclick="handleCardClick('Эко-советы', 'ecoTips')">
+                <img src="images/eco-advice.png" alt="эко-советы">
+                <div class="card-text">Эко-советы</div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup" onclick="closeOutside(event)">
+            <div class="popup-content" id="popupContent"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__logo-column">
+                <img src="images/logo.png" alt="white bear logo" class="footer__logo">
+            </div>
+            <div class="footer__nav-column">
+                <h4 class="footer__column-title">Навигация</h4>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item"><a href="index.html" class="footer__menu-link">Главная</a></li>
+                    <li class="footer__menu-item"><a href="about.html" class="footer__menu-link">О нас</a></li>
+                    <li class="footer__menu-item"><a href="help.html" class="footer__menu-link">Помощь</a></li>
+                    <li class="footer__menu-item"><a href="threats.html" class="footer__menu-link">Угрозы</a></li>
+                    <li class="footer__menu-item"><a href="media.html" class="footer__menu-link">Медиа</a></li>
+                </ul>
+            </div>
+            <div class="footer__social-column">
+                <h4 class="footer__column-title">Контакты</h4>
+                <ul class="footer__social">
+                    <li class="footer__social-item"><a href="https://vk.ru/club238170233" class="footer__social-link">Сообщество во вконтакте</a></li>
+                    <li class="footer__social-item"><a href="https://t.me/mvivgp" class="footer__social-link">Сообщество в телеграме</a></li>
+                </ul>
+            </div>
+            <div class="footer__info-column">
+                <h4 class="footer__info-phone">+7 999 999 99 99</h4>
+                <h4 class="footer__info-email">qwertyuiop@gmail.com</h4>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function generateFundsContent() {
+            return `
+                <div class="tips-wrapper">
+                    <h2 style="font-family: 'Rubik Mono One', monospace; text-align:center; margin-bottom:24px;">Фонды</h2>
+                    <div class="funds-scroll-area">
+                        <div class="fund-block">
+                            <div class="fund-title">
+                                <a href="https://polarbearsinternational.org/" target="_blank" rel="noopener noreferrer">Polar Bears International</a>
+                            </div>
+                            <div class="fund-description">
+                                Ведущая некоммерческая организация, полностью посвящённая сохранению белых медведей и их арктической среды обитания. 
+                                Объединяет учёных, волонтёров и сторонников по всему миру, финансирует исследования, борется с климатическими изменениями 
+                                и развивает образовательные программы. Прямые действия и научный подход делают этот фонд главным голосом в защите белых медведей.
+                            </div>
+                        </div>
+                        <div class="fund-block">
+                            <div class="fund-title">
+                                <a href="https://www.worldwildlife.org/species/polar-bear" target="_blank" rel="noopener noreferrer">WWF — Программа защиты белых медведей</a>
+                            </div>
+                            <div class="fund-description">
+                                Всемирный фонд дикой природы реализует проекты по снижению конфликтов между человеком и медведем, мониторингу популяций 
+                                и борьбе с потерей морского льда. WWF поддерживает приполярные сообщества, помогает внедрять устойчивые практики 
+                                и активно лоббирует климатические решения на международном уровне. Их работа охватывает пять арктических стран.
+                            </div>
+                        </div>
+                        <div class="fund-block">
+                            <div class="fund-title">
+                                <a href="https://polartravelclub.ru/about/charity/" target="_blank" rel="noopener noreferrer">Клуб полярных путешествий</a>
+                            </div>
+                            <div class="fund-description">
+                                Организация объединяет энтузиастов Арктики и профессионалов полярных экспедиций. Часть средств от туров направляется 
+                                на природоохранные проекты, включая поддержку исследований белых медведей и просвещение местных сообществ. 
+                                Клуб способствует развитию ответственного туризма, который не вредит хрупкой арктической экосистеме.
+                            </div>
+                        </div>
+                    </div>
+                    <button class="popup-close-btn" onclick="closePopup()">Вернуться</button>
+                </div>
+            `;
+        }
+
+        function generateFormContent(title) {
+            return `
+                <div class="form-popup-wrapper">
+                    <h2>${title}</h2>
+                    <div class="inputs-container">
+                        <input type="text" placeholder="ФИО" autocomplete="name" id="volunteerName">
+                        <input type="tel" placeholder="Телефон" autocomplete="tel" id="volunteerPhone">
+                        <input type="email" placeholder="Почта" autocomplete="email" id="volunteerEmail">
+                        
+                        <div class="gender-select-wrapper">
+                            <input type="text" placeholder="Пол" id="volunteerGender" readonly autocomplete="off">
+                            <div class="gender-dropdown side-dropdown" id="genderDropdown">
+                                <div class="gender-option" data-gender="female">Женский</div>
+                                <div class="gender-option" data-gender="male">Мужской</div>
+                            </div>
+                        </div>
+                        
+                        <div class="age-input">
+                            <input type="number" placeholder="Возраст" id="volunteerAge" min="1" max="120" step="1">
+                            <div class="age-error-msg" id="ageErrorMsg">⚠️ Стать волонтером можно только с 14 лет</div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="subscribe" id="submitVolunteerBtn">Стать волонтером</button>
+                        <button class="back" onclick="closePopup()">Назад</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function bindVolunteerFormEvents() {
+            // Поле пола с выпадающим списком (сбоку)
+            const genderInput = document.getElementById('volunteerGender');
+            const genderDropdown = document.getElementById('genderDropdown');
+            const genderOptions = document.querySelectorAll('.gender-option');
+            
+            if (genderInput && genderDropdown) {
+                // Позиционирование выпадающего списка относительно поля
+                function positionDropdown() {
+                    const rect = genderInput.getBoundingClientRect();
+                    const popupContent = genderInput.closest('.popup-content');
+                    const popupRect = popupContent.getBoundingClientRect();
+                    
+                    // Позиционируем справа от поля
+                    genderDropdown.style.position = 'fixed';
+                    genderDropdown.style.top = `${rect.top}px`;
+                    genderDropdown.style.left = `${rect.right + 5}px`;
+                    
+                    // Проверяем, не выходит ли за правый край экрана
+                    const dropdownRect = genderDropdown.getBoundingClientRect();
+                    if (dropdownRect.right > window.innerWidth) {
+                        // Если выходит, показываем слева
+                        genderDropdown.style.left = `${rect.left - dropdownRect.width - 5}px`;
+                    }
+                }
+                
+                genderInput.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const isOpen = genderDropdown.classList.contains('show');
+                    
+                    // Закрываем все другие дропдауны
+                    document.querySelectorAll('.gender-dropdown.show').forEach(drop => {
+                        if (drop !== genderDropdown) drop.classList.remove('show');
+                    });
+                    
+                    if (!isOpen) {
+                        positionDropdown();
+                        genderDropdown.classList.add('show');
+                    } else {
+                        genderDropdown.classList.remove('show');
+                    }
+                });
+                
+                genderOptions.forEach(option => {
+                    option.addEventListener('click', function() {
+                        const gender = this.getAttribute('data-gender');
+                        const genderText = this.textContent;
+                        genderInput.value = genderText;
+                        genderInput.setAttribute('data-gender-value', gender);
+                        genderDropdown.classList.remove('show');
+                    });
+                });
+                
+                // При скролле или ресайзе закрываем дропдаун и обновляем позицию при открытии
+                window.addEventListener('scroll', function() {
+                    if (genderDropdown.classList.contains('show')) {
+                        genderDropdown.classList.remove('show');
+                    }
+                });
+                
+                window.addEventListener('resize', function() {
+                    if (genderDropdown.classList.contains('show')) {
+                        genderDropdown.classList.remove('show');
+                    }
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!genderInput.contains(e.target) && !genderDropdown.contains(e.target)) {
+                        genderDropdown.classList.remove('show');
+                    }
+                });
+            }
+            
+            // Валидация возраста
+            const ageInput = document.getElementById('volunteerAge');
+            const submitBtn = document.getElementById('submitVolunteerBtn');
+            const ageErrorMsg = document.getElementById('ageErrorMsg');
+            
+            if (ageInput && submitBtn) {
+                function validateAge() {
+                    const age = parseInt(ageInput.value, 10);
+                    const isValid = !isNaN(age) && age >= 14 && age <= 120;
+                    
+                    if (!isValid && ageInput.value !== '') {
+                        ageInput.classList.add('error-age');
+                        if (ageErrorMsg) ageErrorMsg.classList.add('show');
+                    } else {
+                        ageInput.classList.remove('error-age');
+                        if (ageErrorMsg) ageErrorMsg.classList.remove('show');
+                    }
+                    
+                    if (ageInput.value === '') {
+                        ageInput.classList.remove('error-age');
+                        if (ageErrorMsg) ageErrorMsg.classList.remove('show');
+                    }
+                }
+                
+                ageInput.addEventListener('input', validateAge);
+                ageInput.addEventListener('blur', function() {
+                    const age = parseInt(ageInput.value, 10);
+                    if (ageInput.value !== '' && (isNaN(age) || age < 14)) {
+                        ageInput.classList.add('error-age');
+                        if (ageErrorMsg) ageErrorMsg.classList.add('show');
+                    } else if (ageInput.value !== '' && age >= 14) {
+                        ageInput.classList.remove('error-age');
+                        if (ageErrorMsg) ageErrorMsg.classList.remove('show');
+                    } else if (ageInput.value === '') {
+                        ageInput.classList.remove('error-age');
+                        if (ageErrorMsg) ageErrorMsg.classList.remove('show');
+                    }
+                });
+                
+                const newSubmitBtn = submitBtn.cloneNode(true);
+                submitBtn.parentNode.replaceChild(newSubmitBtn, submitBtn);
+                newSubmitBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('volunteerName')?.value.trim();
+                    const phone = document.getElementById('volunteerPhone')?.value.trim();
+                    const email = document.getElementById('volunteerEmail')?.value.trim();
+                    const genderInputField = document.getElementById('volunteerGender');
+                    const gender = genderInputField?.value.trim();
+                    const age = document.getElementById('volunteerAge')?.value.trim();
+                    const ageNum = parseInt(age, 10);
+                    
+                    let hasError = false;
+                    let errorMessage = '';
+                    
+                    if (!name) {
+                        errorMessage = 'Пожалуйста, заполните поле ФИО';
+                        hasError = true;
+                    }
+                    else if (!phone) {
+                        errorMessage = 'Пожалуйста, заполните поле Телефон';
+                        hasError = true;
+                    }
+                    else if (!email) {
+                        errorMessage = 'Пожалуйста, заполните поле Почта';
+                        hasError = true;
+                    }
+                    else if (!gender || gender === '') {
+                        errorMessage = 'Пожалуйста, выберите пол';
+                        hasError = true;
+                    }
+                    else if (!age) {
+                        errorMessage = 'Пожалуйста, заполните поле Возраст';
+                        hasError = true;
+                        if (ageErrorMsg) ageErrorMsg.classList.add('show');
+                    }
+                    else if (isNaN(ageNum)) {
+                        errorMessage = 'Возраст должен быть числом';
+                        hasError = true;
+                        if (ageErrorMsg) ageErrorMsg.classList.add('show');
+                    }
+                    else if (ageNum < 14) {
+                        errorMessage = 'Стать волонтером можно лицам старше 14 лет';
+                        hasError = true;
+                        if (ageErrorMsg) ageErrorMsg.classList.add('show');
+                        if (ageInput) ageInput.classList.add('error-age');
+                    }
+                    else if (ageNum > 120) {
+                        errorMessage = 'Пожалуйста, введите корректный возраст';
+                        hasError = true;
+                        if (ageErrorMsg) ageErrorMsg.classList.add('show');
+                        if (ageInput) ageInput.classList.add('error-age');
+                    }
+                    
+                    if (hasError) {
+                        alert(errorMessage);
+                    } else {
+                        alert(`Спасибо, ${name}! Вы записаны в волонтеры.\nПол: ${gender}\nВозраст: ${age}\nМы свяжемся с вами по телефону ${phone} или email ${email}`);
+                        closePopup();
+                    }
+                });
+            }
+        }
+        
+        function generateEcoTipsContent() {
+            return `
+                <div class="tips-wrapper">
+                    <h2 style="font-family: 'Rubik Mono One', monospace; text-align:center; margin-bottom:24px;">Эко-советы</h2>
+                    <div class="tips-scroll-area">
+                        <div class="tip-block">
+                            <div class="tip-title">1. Сокращение пластика</div>
+                            <div class="tip-text">
+                                Используйте многоразовые бутылки для воды, эко-сумки вместо пакетов, отказывайтесь от одноразовой посуды. 
+                                Ежегодно тонны пластика попадают в Северный Ледовитый океан, угрожая среде обитания белых медведей.
+                                Маленькая замена в привычках — огромный вклад в чистоту Арктики.
+                            </div>
+                        </div>
+                        <div class="tip-block">
+                            <div class="tip-title">2. Энергосбережение</div>
+                            <div class="tip-text">
+                                Выключайте свет, когда выходите из комнаты, используйте энергоэффективные лампы и приборы класса А++.
+                                Снижая углеродный след, мы замедляем таяние полярных льдов — основного дома белого медведя.
+                                Даже переход на "умные" розетки сокращает выбросы CO₂.
+                            </div>
+                        </div>
+                        <div class="tip-block">
+                            <div class="tip-title">3. Осознанное передвижение</div>
+                            <div class="tip-text">
+                                По возможности отдавайте предпочтение общественному транспорту, велосипеду или пешим прогулкам.
+                                Если пользуетесь автомобилем, попробуйте практиковать каршеринг или электромобили.
+                                Меньше выхлопных газов — чище воздух и стабильнее климат, от которого зависит выживание белых медведей.
+                            </div>
+                        </div>
+                        <div class="tip-block">
+                            <div class="tip-title">4. Ответственное потребление</div>
+                            <div class="tip-text">
+                                Покупайте местные сезонные продукты, сокращайте пищевые отходы. Переработка органики и 
+                                уменьшение количества выбрасываемой еды снижают нагрузку на полигоны и уменьшают метановые выбросы. 
+                                А значит — защищают арктические экосистемы.
+                            </div>
+                        </div>
+                    </div>
+                    <button class="popup-close-btn" onclick="closePopup()">Вернуться</button>
+                </div>
+            `;
+        }
+
+        function handleCardClick(title, cardType) {
+            const popup = document.getElementById('popup');
+            const popupContentDiv = document.getElementById('popupContent');
+            
+            if (cardType === 'ecoTips') {
+                popupContentDiv.innerHTML = generateEcoTipsContent();
+                popupContentDiv.className = 'popup-content tips-popup';
+            } 
+            else if (cardType === 'funds') {
+                popupContentDiv.innerHTML = generateFundsContent();
+                popupContentDiv.className = 'popup-content tips-popup';
+            }
+            else {
+                popupContentDiv.innerHTML = generateFormContent(title);
+                popupContentDiv.className = 'popup-content form-popup';
+                setTimeout(() => {
+                    bindVolunteerFormEvents();
+                }, 10);
+            }
+            
+            popup.style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function closeOutside(event) {
+            if (event.target.id === 'popup') {
+                closePopup();
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const popup = document.getElementById('popup');
+            if (popup) popup.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
